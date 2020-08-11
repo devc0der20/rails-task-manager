@@ -5,5 +5,8 @@
 <h3> <%= "this task is completed" if @task.completed == true %></h3>
 
 <%= link_to "Back to list", tasks_path %>
+<%= link_to "Edit this Task", edit_path %>
+<br>
+<%= link_to "DELETE #{@task.title}", task_path(@task), method: :delete, data: { confirm: "Are U sure?"} %>
 
 
